@@ -9,7 +9,7 @@ class SessionList {
         console.log(ts)
         ts.findAllSessions().then(sessions => {
 
-            sessions.forEach(function(ses){result +=  `<li> ${ses.title} </li>`});
+            sessions.forEach(function(ses){result +=  `<li> <a href="#sessions-list?id=${ses.id}" >${ses.title}</a> </li>`});
             console.log(result)
             document.getElementById(idView).innerHTML = `<ul> ${result} </ul>`;
             // $("#"+idView).innerHtml = result;
